@@ -1,0 +1,265 @@
+
+/* ===== Configuration générale ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #171a30;
+    color: #18223b;
+    padding: 30px 15px;
+}
+
+/* ===== Conteneur principal ===== */
+
+.container {
+    max-width: 720px;
+    margin: auto;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== En-tête ===== */
+
+.header {
+    background: linear-gradient(120deg, #f04459, #c91d3b);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 14px;
+}
+
+/* ===== Formulaire ===== */
+
+form {
+    padding: 25px;
+}
+
+.notice {
+    background: #fff2c9;
+    border-left: 4px solid #ffb900;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #76551b;
+}
+
+/* ===== Sections ===== */
+
+.form-section {
+    border-left: 4px solid #f04459;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.form-section h2 {
+    font-size: 19px;
+    margin-bottom: 20px;
+    color: #17223c;
+}
+
+/* ===== Organisation des champs ===== */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 13px;
+    margin-bottom: 7px;
+    color: #26354f;
+}
+
+/* ===== Champs de saisie ===== */
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]),
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d4d7df;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 13px;
+    background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ed4054;
+    box-shadow: 0 0 0 2px rgba(237, 64, 84, 0.12);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ===== Options et boutons radio ===== */
+
+fieldset {
+    border: 1px solid #d5d5d5;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+legend {
+    color: #ed4054;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.option {
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #fff1f3;
+}
+
+.option input {
+    margin-right: 8px;
+    accent-color: #ed4054;
+}
+
+/* ===== Sélection multiple ===== */
+
+select[multiple] {
+    min-height: 100px;
+}
+
+/* ===== Fréquence ===== */
+
+.range-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.range-container input {
+    flex: 1;
+    accent-color: #ed4054;
+}
+
+.range-container output {
+    background: #ed4054;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* ===== Couleur ===== */
+
+input[type="color"] {
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+/* ===== Documents ===== */
+
+input[type="file"] {
+    font-size: 12px;
+    padding: 8px;
+}
+
+/* ===== Code de parrainage ===== */
+
+.referral {
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* ===== Bouton final ===== */
+
+.submit-container {
+    text-align: center;
+    padding: 10px 0 5px;
+}
+
+button[type="submit"] {
+    background: linear-gradient(120deg, #f04459, #c91d3b);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 35px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(237, 64, 84, 0.25);
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(237, 64, 84, 0.35);
+}
+
+/* ===== Adaptation aux téléphones ===== */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full {
+        grid-column: auto;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .form-section {
+        padding: 15px;
+    }
+}
